@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="somUrna" src="Sons/urna.mp3.mp3"></audio>
+    <audio id="somClick" src="Sons/beep.mp3.mp3"></audio>
+    <audio id="somBranco" src="Sons/white.mp3.mp3"></audio>
+    <audio id="somCorrige" src="Sons/error.mp3.mp3"></audio>
+
+    <div class="urna">
+        <div class="tela">
+            <div class="dado-candidato">
+                <div class="cargo-titulo"></div>
+                <div class="candidato-info">
+                    <div class="numeros-container"></div>
+                    <div class="nome-foto">
+                        <div class="candidato-nome"></div>
+                        <img class="candidato-foto" src="" alt="">
+                        <img class="partido-foto" src="" alt="">
+                    </div>
+                </div>
+                <div class="aviso"></div>
+            </div>
+        </div>
+
+        <div class="teclado">
+            <div class="teclas-numeros">
+                <button onclick="digitar(1)">1</button>
+                <button onclick="digitar(2)">2</button>
+                <button onclick="digitar(3)">3</button>
+                <button onclick="digitar(4)">4</button>
+                <button onclick="digitar(5)">5</button>
+                <button onclick="digitar(6)">6</button>
+                <button onclick="digitar(7)">7</button>
+                <button onclick="digitar(8)">8</button>
+                <button onclick="digitar(9)">9</button>
+                <button onclick="digitar(0)">0</button>
+            </div>
+            <div class="teclas-acoes">
+                <button class="btn-branco" onclick="votarBranco()">BRANCO</button>
+                <button class="btn-corrige" onclick="corrige()">CORRIGE</button>
+                <button class="btn-confirma" onclick="confirma()">CONFIRMA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
